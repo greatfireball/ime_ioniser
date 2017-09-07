@@ -6,3 +6,5 @@ LABEL description="Dockerfile providing the ioniser quality assessment software 
 RUN apt update && apt install --yes r-base
 RUN Rscript -e 'source("https://bioconductor.org/biocLite.R"); biocLite("IONiseR", ask=FALSE)'
 
+VOLUME /data
+
